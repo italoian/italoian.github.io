@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Italo Ian — Portfólio</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">Italo.Ian</a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre"       onclick="closeMenu()">Sobre</a>
+    <a href="#projetos"    onclick="closeMenu()">Projetos</a>
+    <a href="#habilidades" onclick="closeMenu()">Skills</a>
+    <a href="#contato"     onclick="closeMenu()">Contato</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">Desenvolvedor Front-End</span>
+        <h1 class="hero-name">Olá, sou<br /><em>Italo Ian.</em></h1>
+        <p class="hero-desc">
+          Transformo ideias em projetos criativos que unem arte, tecnologia e design.
+          Apaixonado por desenho digital e programação.
+        </p>
+        <div class="hero-btns">
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="#contato"  class="btn btn-outline">Fale comigo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title reveal">Sobre mim</h2>
+      <div class="sobre-grid reveal">
+        <div class="sobre-text">
+          <p>
+            Sou artista digital e desenvolvedor, com foco em criar projetos visuais e funcionais.
+            Tenho experiência com Python, interfaces web e criação de projetos autorais.
+          </p>
+          <p>
+            Gosto de explorar novas ideias envolvendo arte, design, jogos e tecnologia,
+            sempre buscando evoluir minhas habilidades e transformar criatividade em algo único.
+          </p>
+        </div>
+        <div class="sobre-img">
+          <img src="imagens/sobre.png" alt="Foto de Italo Ian" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ── -->
+  <section id="projetos">
+    <div class="container">
+      <h2 class="section-title reveal">Projetos</h2>
+      <div class="cards-grid">
+
+        <div class="card reveal">
+          <div class="card-thumb c1">
+            <img src="imagens/portfolio.png" alt="Portfólio" />
+          </div>
+          <div class="card-body">
+            <h3>Portfólio</h3>
+            <p>Projeto digital com carrinho, filtros e checkout responsivo, destacando design moderno e usabilidade intuitiva.</p>
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+            <span class="card-tag">JS</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-thumb c2">
+            <img src="imagens/dashboard.png" alt="Dashboard Analytics" />
+          </div>
+          <div class="card-body">
+            <h3>Dashboard Analytics</h3>
+            <p>Painel de métricas em tempo real com gráficos interativos e tema escuro.</p>
+            <span class="card-tag">React</span>
+            <span class="card-tag">Chart.js</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-thumb c3">
+            <img src="imagens/appreceita.png" alt="App de Receitas" />
+          </div>
+          <div class="card-body">
+            <h3>App de Receitas</h3>
+            <p>Aplicativo mobile-first para descobrir e salvar receitas culinárias.</p>
+            <span class="card-tag">CSS Grid</span>
+            <span class="card-tag">API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HABILIDADES ── -->
+  <section id="habilidades">
+    <div class="container">
+      <h2 class="section-title reveal">Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">HTML5</div></div>
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">CSS3 / Flexbox / Grid</div></div>
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">JavaScript</div></div>
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">React</div></div>
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">UI / UX Design</div></div>
+        <div class="skill-item reveal"><div class="skill-icon"></div><div class="skill-name">Responsive Design</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section id="contato">
+    <div class="container">
+      <h2 class="section-title reveal">Contato</h2>
+      <div class="contact-wrap reveal">
+        <form id="contactForm" novalidate>
+          <div class="form-group" id="fg-nome">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" placeholder="Seu nome" />
+            <span class="error-msg">Por favor, informe seu nome.</span>
+          </div>
+          <div class="form-group" id="fg-email">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" />
+            <span class="error-msg">Informe um e-mail válido.</span>
+          </div>
+          <div class="form-group" id="fg-msg">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+            <span class="error-msg">A mensagem não pode estar vazia.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Enviar mensagem</button>
+        </form>
+        <div id="form-success">Mensagem enviada com sucesso! Em breve entrarei em contato.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <p>© 2026 <a href="#">Italo Ian</a> · Feito com HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Scripts (ao final do body para melhor performance) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
